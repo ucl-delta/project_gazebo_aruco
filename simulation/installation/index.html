@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Installation - Aruco Autonomous Drones</title>
+<link href="../../css/theme.css" rel="stylesheet"/>
+<link href="../../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../../kbd.css" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Installation";
+        var mkdocs_page_input_path = "simulation/installation.md";
+        var mkdocs_page_url = null;
+      </script>
+<!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../.."> Aruco Autonomous Drones
+        </a><div role="search">
+<form action="../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Building Drone</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../drone/drone_basics/">Introduction to Drones</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Simulation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#local">2.0.1 Local</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-and-build-aerostack2-we-use-version-112">Setup and build Aerostack2 (we use version 1.1.2)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-this-project">Setup this project</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#docker">2.0.2 Docker</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-with-vnc">2.0.3 Docker with VNC</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-installation">2.1 Environment Installation</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-ubuntu-2204">Installing Ubuntu 22.04</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-ros2-humble">Installing ROS2 Humble</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-ignition-gazebo-fortress">Installing Ignition Gazebo Fortress</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">2.2 Usage</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-crazyflie-simulation">2.2.1 Running Crazyflie Simulation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#developing-the-application">2.2.2 Developing The Application</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#real-crazyflies">2.2.3 Real Crazyflies</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Autonomy</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="../../something else">None</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Real Flight</span></p>
+<ul>
+<li class="toctree-l1"><a class="" href="../../something">None</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../..">Aruco Autonomous Drones</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href="../.."></a></li>
+<li class="breadcrumb-item">Simulation</li>
+<li class="breadcrumb-item active">Installation</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/ucl-delta/project_gazebo_aruco/edit/master/docs/simulation/installation.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="installation"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h1>
+<p>There are three ways you can run this project depending on your situation or operating system. 
+- Linux: All 3 ways will work
+- Windows: Docker and Docker with VNC
+- Max OSX: Docker with VNC</p>
+<p>Note that you will need at least 20Gb free on your system to avoid lockup. Graphics card and 16Gb RAM is recommended. </p>
+<p>See Documentation for detailed instructions</p>
+<h3 id="local"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.0.1</span> Local<a class="headerlink" href="#local" title="Permanent link">¶</a></h3>
+<p>Install Ubuntu 22.04, ROS2 Humble, Ignition Gazebo Fortress as per their instructions. See (these instructions for installation)[#Environment-Installation]</p>
+<h4 id="setup-and-build-aerostack2-we-use-version-112"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.0.1.1</span> Setup and build Aerostack2 (we use version 1.1.2)<a class="headerlink" href="#setup-and-build-aerostack2-we-use-version-112" title="Permanent link">¶</a></h4>
+<p>In your home directory (could be anywhere else but all the paths below are for your home directory)</p>
+<pre><code>mkdir -p ~/aerostack2_ws/src
+cd ~/aerostack2_ws/src
+git clone https://github.com/mhl787156/aerostack2.git -b 1.1.2
+</code></pre>
+<p>This will create a ros2 workspace and place the two project repositories in it.</p>
+<p>You will need to install the dependencies by running the following:</p>
+<pre><code>sudo apt install git python3-rosdep python3-pip python3-colcon-common-extensions tmux tmuxinator -y
+</code></pre>
+<p>And then going back into the root workspace</p>
+<pre><code>cd ~/aerostack2_ws
+sudo rosdep init
+rosdep update
+rosdep install -y -r -q --from-paths src --ignore-src
+</code></pre>
+<p>Then, enable the handy aerostack2 cli (only run this once)</p>
+<pre><code>echo 'export AEROSTACK2_PATH=$HOME/aerostack2_ws/src/aerostack2' &gt;&gt; $HOME/.bashrc
+echo 'source $AEROSTACK2_PATH/as2_cli/setup_env.bash' &gt;&gt; $HOME/.bashrc
+echo 'source $HOME/aerostack2_ws/install/setup.bash' &gt;&gt; $HOME/.bashrc
+source ~/.bashrc
+</code></pre>
+<p>This will enable you to build the project from any folder using</p>
+<pre><code>as2 build
+</code></pre>
+<p>Now as2 should be installed.</p>
+<h4 id="setup-this-project"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.0.1.2</span> Setup this project<a class="headerlink" href="#setup-this-project" title="Permanent link">¶</a></h4>
+<p>Get this project locally</p>
+<pre><code>mkdir -p ~/aerostack2_ws/src
+cd ~/aerostack2_ws/src
+git clone https://github.com/ucl-delta/project_gazebo_aruco.git
+</code></pre>
+<p>Run the example using </p>
+<pre><code>./launch_as2.bash -s -t
+</code></pre>
+<h3 id="docker"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.0.2</span> Docker<a class="headerlink" href="#docker" title="Permanent link">¶</a></h3>
+<p>Ensure Docker or Docker Desktop is installed on your machine</p>
+<p>First your will need to clone this project somewhere (doesn't need to be in a ros2 workspace)</p>
+<pre><code>git clone https://github.com/ucl-delta/project_gazebo_aruco.git
+</code></pre>
+<p>To build and/or run the container run the script</p>
+<p>This container is based on Ubuntu 22.04, ROS2 Humble and Ignition Gazebo Fortress</p>
+<pre><code>./docker/docker_start.bash
+</code></pre>
+<p>After building for a while, this will drop you inside the docker container.</p>
+<p>The container will have live mounted this project into <code>/ros2/project_gazebo_aruco</code> so that any changes made to this repository outside of the container will be reflected inside. </p>
+<p>Inside the container, navigate to that repository and run the example.</p>
+<pre><code>cd /ros2/project_gazebo_aruco
+./launch_as2.bash -s -t
+</code></pre>
+<blockquote>
+<p>Note that you can utilise a GPU if you install the <code>nvidia-container-toolkit</code>. Pass the <code>-nvidia</code> argument to <code>docker_start.bash</code></p>
+</blockquote>
+<h3 id="docker-with-vnc"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.0.3</span> Docker with VNC<a class="headerlink" href="#docker-with-vnc" title="Permanent link">¶</a></h3>
+<p>This will enable all of the ROS2 to run standalone with no outside network connections. It makes use of a Virtual Network Computing interface to share a the container's desktop GUI with the outside world. In this case your browser! </p>
+<p>Ensure Docker or Docker Desktop is installed on your machine</p>
+<p>First your will need to clone this project somewhere (doesn't need to be in a ros2 workspace)</p>
+<pre><code>git clone https://github.com/ucl-delta/project_gazebo_aruco.git
+</code></pre>
+<p>To build and/or run the container run the script</p>
+<p>This container is based on Ubuntu 22.04, ROS2 Humble and Ignition Gazebo Fortress</p>
+<pre><code>./docker/docker_vnc_start.bash
+</code></pre>
+<p>After building for a while, this will say that it has started the VNC server</p>
+<p>Go into a browser and navigate to <code>https://127.0.0.1:6080</code> and press <code>connect</code>. This will drop you into an ubunut22.04 desktop environment with all the things you need! </p>
+<p>The container will have live mounted this project into <code>/ros2/project_gazebo_aruco</code> so that any changes made to this repository outside of the container will be reflected inside. </p>
+<p>Open up a terminal (<code>terminator</code>) and navigate to <code>/ros2/project_gazebo_aruco</code> to run the example. </p>
+<pre><code>cd /ros2/project_gazebo_aruco
+./launch_as2.bash -s -t
+</code></pre>
+<blockquote>
+<p>Note that you can utilise a GPU if you install the <code>nvidia-container-toolkit</code>. Pass the <code>-nvidia</code> argument to <code>docker_vnc_start.bash</code> when running the vnc. </p>
+</blockquote>
+<h2 id="environment-installation"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> Environment Installation<a class="headerlink" href="#environment-installation" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This section applies if you are trying to setup from scratch</p>
+</blockquote>
+<p>This project relies on ROS2 Humble (End-of-life 2027), Ignition Gazebo Fortress, and Ubuntu 22.04. This section goes over how to install these elements. </p>
+<h4 id="installing-ubuntu-2204"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.0.1</span> Installing Ubuntu 22.04<a class="headerlink" href="#installing-ubuntu-2204" title="Permanent link">¶</a></h4>
+<p>Your options are </p>
+<ol>
+<li>Finding a spare machine that you can wipe and install Ubuntu on</li>
+<li>Finding a machine that you would be willing to dual boot</li>
+<li>Running a virtual machine</li>
+<li>Running a container (Not supported yet as I havent made a container - also this requires gazebo which requires a GUI which is not ideal for containers apart from singularity containers)</li>
+</ol>
+<p>For options 1 and 2, you will need to find a USB stick that is &gt;4Gb and using a tool such as <a href="https://rufus.ie/en/">Rufus</a> flash the <a href="https://ubuntu.com/download/desktop">Ubuntu 22.04 ISO file</a> onto it. </p>
+<p>Once you have a flashed USB drive, you can insert that into the spare machine. On startup make sure to mash some combination of F2, F8 or F12 to go to the BIOS boot screen and select boot from USB. </p>
+<p>This will start up tp the Ubuntu installer on the USB drive where you can select what to do. Whether that is to wipe the machine, or in the advanced menu create a new partition for Ubuntu so you can dual boot (For Windows you will also need to shrink your primary partition). For more details <a href="https://www.onlogic.com/company/io-hub/how-to-dual-boot-windows-11-and-linux/">see a guide such as this one</a>. </p>
+<p>You can also download the ISO file and run it in a virtual machine program such as <a href="https://www.virtualbox.org/">VirtualBox</a>. </p>
+<blockquote>
+<p>I have created and exported a virtual machine with everything already installed for you to use. See the private teams group. </p>
+</blockquote>
+<p>In virtualbox you can import an existing virtual machine. Once installed and you have the gui up, there is an option to import (orange arrow), in which you can select the existing exported virtual machine.
+Once you have a virtual machine setup, you can simply start it. </p>
+<blockquote>
+<p>Note: Since this project uses gazebo and is not the lightest workioad, you may want to give the VM more resources i.e. CPU, RAM and potetially video memory too. You can do this in the virtual machine settings. </p>
+</blockquote>
+<h4 id="installing-ros2-humble"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.0.2</span> Installing ROS2 Humble<a class="headerlink" href="#installing-ros2-humble" title="Permanent link">¶</a></h4>
+<p>For this project we will be using ROS2 Humble. Full installation instructions are <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">here</a>. But in short:</p>
+<pre><code>locale  # check for UTF-8
+
+sudo apt update &amp;&amp; sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+locale  # verify settings
+
+# Install
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update &amp;&amp; sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+
+# Update
+sudo apt update
+sudo apt upgrade
+
+# Install ROS2
+sudo apt install ros-humble-desktop
+sudo apt install ros-dev-tools
+
+# Auto Source in bashrc to have access to ros2 tools
+echo 'source ~/opt/ros/huble/setup.bash' &gt;&gt; $HOME/.bashrc
+</code></pre>
+<h4 id="installing-ignition-gazebo-fortress"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.0.3</span> Installing Ignition Gazebo Fortress<a class="headerlink" href="#installing-ignition-gazebo-fortress" title="Permanent link">¶</a></h4>
+<p>The recommended compatible gazebo version for Ubuntu 22.04 and Humble is Fortress where installation instructions are <a href="https://gazebosim.org/docs/fortress/install_ubuntu">here</a>. But in short:</p>
+<pre><code>sudo apt-get update
+sudo apt-get install lsb-release wget gnupg
+
+sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list &gt; /dev/null
+sudo apt-get update
+sudo apt-get install ignition-fortress
+</code></pre>
+<p>You can check succesful installation by using the <code>ign</code> cli command</p>
+<p>With these three installed, you should be ready to run the pollibees project, see <a href="#pollibee-project-1">the above instrctions to continue</a></p>
+<h2 id="usage"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
+<h3 id="running-crazyflie-simulation"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.1</span> Running Crazyflie Simulation<a class="headerlink" href="#running-crazyflie-simulation" title="Permanent link">¶</a></h3>
+<p>The initial usage example follows the <a href="https://aerostack2.github.io/_02_examples/crazyflie/index.html">aerostack2 crazyflie tutorials which are here</a>. It would be recommended to have a look through the aerostack2 docs, but to get the simulation up you can run the following.</p>
+<p>Make sure you have followed the aerostack2 and project pollibee build instructions, then source the relevant files and go into the project pollibee folder</p>
+<pre><code>source /opt/ros/humble/setup.bash # You don't need to run if its already in your ~/.bashrc
+source ~/aerostack2_ws/install/setup.bash # You don't need to run if its already in your ~/.bashrc
+</code></pre>
+<pre><code>cd ~/aerostack2_ws/src/project_pollibee
+</code></pre>
+<p>In the project there is a core run file written in bash, for basic tasks this avoids the user having to remember lots of ros2 commands. See the tutorial for more info and more options, but to spin up a single drone run:</p>
+<pre><code>./launch_as2.bash -s
+</code></pre>
+<p>This will startup a tmux session with multiple tabs to startup the different ROS elements. Tmux is one way to run multiple things at the same time. Each tab is essentially the same as running another terminal window and uses your bash configuration and home directory. (It's not in its own container or anything like that). </p>
+<blockquote>
+<p>Selecting your terminal window, you can scroll through the different tabs by pressing <code>ctrl+b</code> then a number 0 to 5. The initial terminal window you can input stuff in is tab 5. This is useful if things arent working properly and you want to see what's going on, debug messages etc. </p>
+</blockquote>
+<p>In the tmux tab that first pops up (tab number 5) you can run the mission using</p>
+<pre><code>python3 pollibee.py -s
+</code></pre>
+<blockquote>
+<p>Note: <code>./launch_as2.bash -sa</code>, the <code>a</code> option will automatically run <code>mission.py</code>. </p>
+</blockquote>
+<p>And follow the instructions on screen. With any luck the crazyflie (its really small you might have to zoom into gazebo) will takeoff and do something. </p>
+<blockquote>
+<p>Note: as of 10/03/2024 the crazyflie model has not been properly tuned. If it's not flying properly, change the file <code>sim_config/world.json</code> line 5 (<code>model_type</code>) to use <code>quadrotor_base</code> instead of crazyflie and it will use one of aerostack2 internal quadcopter models for now. </p>
+<p>Note: If you have a non-terminating program you can use Ctrl+C to stop the current program</p>
+</blockquote>
+<p>In this terminal you can also run ROS2 introspection using the ros2 cli tools such as </p>
+<pre><code class="language-bash"># Introspect current state
+ros2 topic list
+ros2 service list
+ros2 action list
+
+# Interact with ros2 streams
+ros2 topic pub &lt;topic name&gt; &lt;topic_type&gt; &lt;topic payload in yaml format&gt;
+...
+ros2 --help
+</code></pre>
+<p>As well as run any extra scripts etc. </p>
+<p><strong>IMPORTANT</strong> To stop your simulation and get out of the tmux environment you must run the stop.bash file in the project_pollibots directory.</p>
+<pre><code>./stop.bash 
+</code></pre>
+<p>This can be run both inside tmux, and in any terminal in the right directory and performs a clean exit of the simulation. </p>
+<p><strong>YOU SHOULD ALWAYS USE THIS COMMAND TO STOP THE SIMULATION</strong>. </p>
+<p>Closing Gazbo directly won't stop the simulation. Make sure you do not have more than one simulation going at the same time! </p>
+<h3 id="developing-the-application"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.2</span> Developing The Application<a class="headerlink" href="#developing-the-application" title="Permanent link">¶</a></h3>
+<p>First check whether you need to git pull from the main repository. And check that your aerostack2 repo is in the <code>robee</code> branch (<code>git branch -l</code>).</p>
+<p>The primary file defining the mission is <code>mission.py</code>. </p>
+<p>Aerostack2 provides a really handy python api for abstracting out interacting with the vehicles through code (<code>DroneInterface</code>).</p>
+<p>We will want to update it to basically do what we want! </p>
+<blockquote>
+<p>Note that they have a distinction between the vehicles in the arena and the objects in the arena. </p>
+</blockquote>
+<p>The <code>sim_config</code> folder contains all of the configuration files for running the simulation. The main one is <code>world.json</code> which defines what is spawned into the world and where. </p>
+<blockquote>
+<p>New models must be setup and placed within the <code>aerostack2/as2_simulation_assets/as2_gazebo_assets/models</code> and then <code>as2 build</code> to install them. There should exist the <code>pollibee_flower</code> object which can be selected as <code>model_type</code></p>
+</blockquote>
+<p>The other configurations are for the different modules and plugins which perform the interaction of the drone and simualtor/real world. </p>
+<p>For visualisation, we can use Foxglove Studio - download the local one <a href="https://foxglove.dev/download">here</a>. You will need to install the bridge:</p>
+<pre><code>sudo apt-get install ros-humble-foxglove-bridge
+</code></pre>
+<p>You can run it as a standalone application.
+You can then import the layout <code>foxglove_layout.json</code> using <a href="https://docs.foxglove.dev/docs/visualization/layouts/#import-and-export">these instructions</a>. 
+Then when the simulator is started using <code>./launch_as2.bash</code>, the foxglove-bridge will also autostart and autoconnect to the default connection of <code>ws:/localhost:8765</code></p>
+<h3 id="real-crazyflies"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.3</span> Real Crazyflies<a class="headerlink" href="#real-crazyflies" title="Permanent link">¶</a></h3>
+<blockquote>
+<p><strong>THIS HAS NOT BEEN TRIED YET</strong> </p>
+</blockquote>
+<p>See the instructions in the <a href="https://aerostack2.github.io/_02_examples/crazyflie/project_crazyflie_gates/index.html#real-execution">orignal project</a></p>
+<p>Please write up instructions when we have worked them out. </p>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../../drone/drone_basics/" title="Introduction to Drones"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+<p>Copyright © 2024 University College London AML Lab</p>
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/ucl-delta/project_gazebo_aruco" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../../drone/drone_basics/" style="color: #fcfcfc">« Previous</a></span>
+</span>
+</div>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "../..";</script>
+<script src="../../js/theme_extra.js"></script>
+<script src="../../js/theme.js"></script>
+<script src="../../search/main.js"></script>
+<script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+</body>
+</html>
