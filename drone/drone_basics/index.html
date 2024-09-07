@@ -40,11 +40,17 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction to Drones</a>
 <ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-uav-or-a-drone">1.1 What is a UAV or a Drone</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-drones">1.2 Types of Drones</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#piloting-drones">1.3 Piloting Drones</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#parts-of-a-drone">1.4 Parts of a drone</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../build_qav250_exercise/">QAV250 Build Guide</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../build_qav250_guide/">QAV250 Build Guide (full)</a>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Simulation</span></p>
@@ -55,19 +61,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../simulation/installation/">Project Installation</a>
 </li>
-<li class="toctree-l1"><a class="" href="../..">Example Scenario</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Autonomy</span></p>
-<ul>
-<li class="toctree-l1"><a class="" href="../..">Programming the Drone</a>
-</li>
-<li class="toctree-l1"><a class="" href="../..">Detecting Aruco Tags</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Real Flight</span></p>
-<ul>
-<li class="toctree-l1"><a class="" href="../../something">None</a>
+<li class="toctree-l1"><a class="reference internal" href="../../simulation/example/">Example Scenario</a>
 </li>
 </ul>
 </div>
@@ -93,6 +87,45 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="introduction-to-drone-systems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Introduction to Drone Systems<a class="headerlink" href="#introduction-to-drone-systems" title="Permanent link">¶</a></h1>
+<p>This tutorial page gives you a brief overview of a drone system and the physical and software components that make up a drone system </p>
+<div class="toc">
+<ul>
+<li><a href="#introduction-to-drone-systems">1. Introduction to Drone Systems</a><ul>
+<li><a href="#what-is-a-uav-or-a-drone">1.1 What is a UAV or a Drone</a></li>
+<li><a href="#types-of-drones">1.2 Types of Drones</a></li>
+<li><a href="#piloting-drones">1.3 Piloting Drones</a></li>
+<li><a href="#parts-of-a-drone">1.4 Parts of a drone</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="what-is-a-uav-or-a-drone"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> What is a UAV or a Drone<a class="headerlink" href="#what-is-a-uav-or-a-drone" title="Permanent link">¶</a></h2>
+<p>A drone or unmanned aerial vehicle (UAV) is an unmanned "robotic" vehicle that can be remotely or autonomously controlled.</p>
+<p>Drones are used for many consumer, industrial, government and military applications (opens new window). These include (non exhaustively): aerial photography/video, carrying cargo, racing, search and surveying etc.</p>
+<blockquote>
+<p>Different types of drones exist for use in air, ground, sea, and underwater. These are (more formally) referred to as Unmanned Aerial Vehicles (UAV), Unmanned Aerial Systems (UAS), Unmanned Ground Vehicles (UGV), Unmanned Surface Vehicles (USV), Unmanned Underwater Vehicles (UUV).</p>
+</blockquote>
+<p>The "brain" of the drone is called an <em>autopilot</em>. It consists of flight stack software running on vehicle controller ("flight controller") hardware.</p>
+<p>A <em>multi-rotor</em> is a specific type of UAV which uses two of more lift-generating rotors to fly. One of the most common will be the Quadrotor which has 4 motors in an 'X' pattern. These UAVs provide much simpler flight control than other types of aerial vehicle. This tutorial focuses on the flight of a simple quadrotor, but Starling can be used to operate many different types of robot.</p>
+<blockquote>
+<p>From this point on in this tutorial, 'drone' or 'UAV' will refer to a multi-rotor UAV unless otherwise stated.</p>
+</blockquote>
+<h2 id="types-of-drones"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Types of Drones<a class="headerlink" href="#types-of-drones" title="Permanent link">¶</a></h2>
+<p>These drones are used for many purposes, most notably in photography and education. Another type are fixed-wing drones, which resemble miniature airplanes and excel in long-range missions and mapping tasks. A third type are hybrid drones which combine the features of multirotor and fixed-wing drones, offering more versatility and extended flight time. Each drone type has its advantages and is suited to specific applications and operational requirements.</p>
+<h2 id="piloting-drones"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Piloting Drones<a class="headerlink" href="#piloting-drones" title="Permanent link">¶</a></h2>
+<p>Piloting drones takes a bit of practice, but it’s accessible enough that even kids can do it! The controller or joystick helps you to navigate your drone where you want it to go. Once airborne, there are four basic movements of drone flight that need to be mastered:</p>
+<ul>
+<li>Throttle – vertical movement (up and down), sometimes called altitude. </li>
+<li>Yaw – rotation from left to right</li>
+<li>Pitch – backward and forward movement</li>
+<li>Roll – left to right movement without rotation</li>
+</ul>
+<p><img alt="Drone control basics" src="../images/drone_control.png"/></p>
+<p>Once you get used to the terminology and the orientation of the drone, the sky is the literal limit!</p>
+<p>Note that in more complicated systems such as the one we use today there are other modes to! The Yaw, Pitch, Roll above describes the attitude of the vehicle. Acrobatic and FPV drones usually operate on attitude rates, where the controller gives Pitch rates or yaw rates. This is desirable as it gives the feeling of immediate reaction to controls - although that does mean you have to actively stabilise the drone yourself. </p>
+<p>On the other side, even higher level control metods exist which translte attitude to cartesian x,y,z frames. Often drones end up being either velocity controlled or position controlled. The benefits of these higher level control is that you can command them to go to places relative to other things. The only downside is that the drone needs to know where it is in relation to the world - either using GPS, indoor positioning or onboard SLAM (simultaneous localisation and mapping) solutions. </p>
+<h2 id="parts-of-a-drone"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Parts of a drone<a class="headerlink" href="#parts-of-a-drone" title="Permanent link">¶</a></h2>
+<p><img alt="Drone Parts" src="../images/drone_parts.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

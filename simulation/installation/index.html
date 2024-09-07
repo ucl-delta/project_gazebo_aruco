@@ -42,8 +42,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../drone/build_qav250_exercise/">QAV250 Build Guide</a>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../drone/build_qav250_guide/">QAV250 Build Guide (full)</a>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Simulation</span></p>
 <ul class="current">
@@ -53,9 +51,9 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current" href="#">Project Installation</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#installation">6.1 Installation</a>
+<li class="toctree-l2"><a class="reference internal" href="#installation">5.1 Installation</a>
 <ul>
-<li class="toctree-l3"><a class="reference internal" href="#local">6.1.1 Local</a>
+<li class="toctree-l3"><a class="reference internal" href="#local">5.1.1 Local</a>
 <ul>
 <li class="toctree-l4"><a class="reference internal" href="#setup-and-build-aerostack2-we-use-version-112">Setup and build Aerostack2 (we use version 1.1.2)</a>
 </li>
@@ -63,13 +61,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#docker">6.1.2 Docker</a>
+<li class="toctree-l3"><a class="reference internal" href="#docker">5.1.2 Docker</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#docker-with-vnc">6.1.3 Docker with VNC</a>
+<li class="toctree-l3"><a class="reference internal" href="#docker-with-vnc">5.1.3 Docker with VNC</a>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#environment-installation">6.2 Environment Installation</a>
+<li class="toctree-l2"><a class="reference internal" href="#environment-installation">5.2 Environment Installation</a>
 <ul>
 <li class="toctree-l3"><a class="reference internal" href="#installing-ubuntu-2204">Installing Ubuntu 22.04</a>
 </li>
@@ -81,19 +79,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="" href="../..">Example Scenario</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Autonomy</span></p>
-<ul>
-<li class="toctree-l1"><a class="" href="../..">Programming the Drone</a>
-</li>
-<li class="toctree-l1"><a class="" href="../..">Detecting Aruco Tags</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Real Flight</span></p>
-<ul>
-<li class="toctree-l1"><a class="" href="../../something">None</a>
+<li class="toctree-l1"><a class="reference internal" href="../example/">Example Scenario</a>
 </li>
 </ul>
 </div>
@@ -118,22 +104,22 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="installation-the-aruco-project"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.</span> Installation the ARUCO Project<a class="headerlink" href="#installation-the-aruco-project" title="Permanent link">¶</a></h1>
+<h1 id="installation-the-aruco-project"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> Installation the ARUCO Project<a class="headerlink" href="#installation-the-aruco-project" title="Permanent link">¶</a></h1>
 <p>This page goes over how you run this example aruco project</p>
 <div class="toc">
 <ul>
-<li><a href="#installation-the-aruco-project">6. Installation the ARUCO Project</a><ul>
-<li><a href="#installation">6.1 Installation</a><ul>
-<li><a href="#local">6.1.1 Local</a><ul>
+<li><a href="#installation-the-aruco-project">5. Installation the ARUCO Project</a><ul>
+<li><a href="#installation">5.1 Installation</a><ul>
+<li><a href="#local">5.1.1 Local</a><ul>
 <li><a href="#setup-and-build-aerostack2-we-use-version-112">Setup and build Aerostack2 (we use version 1.1.2)</a></li>
 <li><a href="#setup-this-project">Setup this project</a></li>
 </ul>
 </li>
-<li><a href="#docker">6.1.2 Docker</a></li>
-<li><a href="#docker-with-vnc">6.1.3 Docker with VNC</a></li>
+<li><a href="#docker">5.1.2 Docker</a></li>
+<li><a href="#docker-with-vnc">5.1.3 Docker with VNC</a></li>
 </ul>
 </li>
-<li><a href="#environment-installation">6.2 Environment Installation</a><ul>
+<li><a href="#environment-installation">5.2 Environment Installation</a><ul>
 <li><a href="#installing-ubuntu-2204">Installing Ubuntu 22.04</a></li>
 <li><a href="#installing-ros2-humble">Installing ROS2 Humble</a></li>
 <li><a href="#installing-ignition-gazebo-fortress">Installing Ignition Gazebo Fortress</a></li>
@@ -143,7 +129,7 @@
 </li>
 </ul>
 </div>
-<h2 id="installation"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1</span> Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<h2 id="installation"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1</span> Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>There are three ways you can run this project depending on your situation or operating system. </p>
 <ul>
 <li>Linux: All 3 ways will work</li>
@@ -152,9 +138,9 @@
 </ul>
 <p>Note that you will need at least 20Gb free on your system to avoid lockup. Graphics card and 16Gb RAM is recommended. </p>
 <p>See Documentation for detailed instructions</p>
-<h3 id="local"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1.1</span> Local<a class="headerlink" href="#local" title="Permanent link">¶</a></h3>
+<h3 id="local"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.1</span> Local<a class="headerlink" href="#local" title="Permanent link">¶</a></h3>
 <p>Install Ubuntu 22.04, ROS2 Humble, Ignition Gazebo Fortress as per their instructions. See <a href="#Environment-Installation">these instructions for installation</a></p>
-<h4 id="setup-and-build-aerostack2-we-use-version-112"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1.1.1</span> Setup and build Aerostack2 (we use version 1.1.2)<a class="headerlink" href="#setup-and-build-aerostack2-we-use-version-112" title="Permanent link">¶</a></h4>
+<h4 id="setup-and-build-aerostack2-we-use-version-112"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.1.1</span> Setup and build Aerostack2 (we use version 1.1.2)<a class="headerlink" href="#setup-and-build-aerostack2-we-use-version-112" title="Permanent link">¶</a></h4>
 <p>In your home directory (could be anywhere else but all the paths below are for your home directory)</p>
 <pre><code>mkdir -p ~/aerostack2_ws/src
 cd ~/aerostack2_ws/src
@@ -180,16 +166,17 @@ source ~/.bashrc
 <pre><code>as2 build
 </code></pre>
 <p>Now as2 should be installed.</p>
-<h4 id="setup-this-project"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1.1.2</span> Setup this project<a class="headerlink" href="#setup-this-project" title="Permanent link">¶</a></h4>
+<h4 id="setup-this-project"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.1.2</span> Setup this project<a class="headerlink" href="#setup-this-project" title="Permanent link">¶</a></h4>
 <p>Get this project locally</p>
 <pre><code>mkdir -p ~/aerostack2_ws/src
 cd ~/aerostack2_ws/src
 git clone https://github.com/ucl-delta/project_gazebo_aruco.git
 </code></pre>
 <p>Run the example using </p>
-<pre><code>./launch_as2.bash -s -t
+<pre><code>cd /ros2/project_gazebo_aruco
+./launch_as2.bash -s -t
 </code></pre>
-<h3 id="docker"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1.2</span> Docker<a class="headerlink" href="#docker" title="Permanent link">¶</a></h3>
+<h3 id="docker"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.2</span> Docker<a class="headerlink" href="#docker" title="Permanent link">¶</a></h3>
 <p>Ensure Docker or Docker Desktop is installed on your machine</p>
 <p>First your will need to clone this project somewhere (doesn't need to be in a ros2 workspace)</p>
 <pre><code>git clone https://github.com/ucl-delta/project_gazebo_aruco.git
@@ -207,7 +194,7 @@ git clone https://github.com/ucl-delta/project_gazebo_aruco.git
 <blockquote>
 <p>Note that you can utilise a GPU if you install the <code>nvidia-container-toolkit</code>. Pass the <code>-nvidia</code> argument to <code>docker_start.bash</code></p>
 </blockquote>
-<h3 id="docker-with-vnc"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1.3</span> Docker with VNC<a class="headerlink" href="#docker-with-vnc" title="Permanent link">¶</a></h3>
+<h3 id="docker-with-vnc"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.3</span> Docker with VNC<a class="headerlink" href="#docker-with-vnc" title="Permanent link">¶</a></h3>
 <p>This will enable all of the ROS2 to run standalone with no outside network connections. It makes use of a Virtual Network Computing interface to share a the container's desktop GUI with the outside world. In this case your browser! </p>
 <p>Ensure Docker or Docker Desktop is installed on your machine</p>
 <p>First your will need to clone this project somewhere (doesn't need to be in a ros2 workspace)</p>
@@ -227,12 +214,15 @@ git clone https://github.com/ucl-delta/project_gazebo_aruco.git
 <blockquote>
 <p>Note that you can utilise a GPU if you install the <code>nvidia-container-toolkit</code>. Pass the <code>-nvidia</code> argument to <code>docker_vnc_start.bash</code> when running the vnc. </p>
 </blockquote>
-<h2 id="environment-installation"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.2</span> Environment Installation<a class="headerlink" href="#environment-installation" title="Permanent link">¶</a></h2>
+<h2 id="environment-installation"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2</span> Environment Installation<a class="headerlink" href="#environment-installation" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>This section applies if you are trying to setup from scratch</p>
 </blockquote>
 <p>This project relies on ROS2 Humble (End-of-life 2027), Ignition Gazebo Fortress, and Ubuntu 22.04. This section goes over how to install these elements. </p>
-<h4 id="installing-ubuntu-2204"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.2.0.1</span> Installing Ubuntu 22.04<a class="headerlink" href="#installing-ubuntu-2204" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>You may want to refer to the <a href="../intro_to_linux/">Intro To Linux Tutorial</a> to setup some of the dependencies.</p>
+</blockquote>
+<h4 id="installing-ubuntu-2204"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2.0.1</span> Installing Ubuntu 22.04<a class="headerlink" href="#installing-ubuntu-2204" title="Permanent link">¶</a></h4>
 <p>Your options are </p>
 <ol>
 <li>Finding a spare machine that you can wipe and install Ubuntu on</li>
@@ -252,7 +242,7 @@ Once you have a virtual machine setup, you can simply start it. </p>
 <blockquote>
 <p>Note: Since this project uses gazebo and is not the lightest workioad, you may want to give the VM more resources i.e. CPU, RAM and potetially video memory too. You can do this in the virtual machine settings. </p>
 </blockquote>
-<h4 id="installing-ros2-humble"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.2.0.2</span> Installing ROS2 Humble<a class="headerlink" href="#installing-ros2-humble" title="Permanent link">¶</a></h4>
+<h4 id="installing-ros2-humble"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2.0.2</span> Installing ROS2 Humble<a class="headerlink" href="#installing-ros2-humble" title="Permanent link">¶</a></h4>
 <p>For this project we will be using ROS2 Humble. Full installation instructions are <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">here</a>. But in short:</p>
 <pre><code>locale  # check for UTF-8
 
@@ -281,7 +271,7 @@ sudo apt install ros-dev-tools
 # Auto Source in bashrc to have access to ros2 tools
 echo 'source ~/opt/ros/huble/setup.bash' &gt;&gt; $HOME/.bashrc
 </code></pre>
-<h4 id="installing-ignition-gazebo-fortress"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.2.0.3</span> Installing Ignition Gazebo Fortress<a class="headerlink" href="#installing-ignition-gazebo-fortress" title="Permanent link">¶</a></h4>
+<h4 id="installing-ignition-gazebo-fortress"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2.0.3</span> Installing Ignition Gazebo Fortress<a class="headerlink" href="#installing-ignition-gazebo-fortress" title="Permanent link">¶</a></h4>
 <p>The recommended compatible gazebo version for Ubuntu 22.04 and Humble is Fortress where installation instructions are <a href="https://gazebosim.org/docs/fortress/install_ubuntu">here</a>. But in short:</p>
 <pre><code>sudo apt-get update
 sudo apt-get install lsb-release wget gnupg
@@ -291,12 +281,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-
 sudo apt-get update
 sudo apt-get install ignition-fortress
 </code></pre>
-<p>You can check succesful installation by using the <code>ign</code> cli command</p>
-<p>With these three installed, you should be ready to run the pollibees project, see <a href="#pollibee-project-1">the above instrctions to continue</a></p>
+<p>You can check succesful installation by using the <code>ign</code> cli command or <code>gz</code> cli command</p>
+<p>With these three installed, you should be ready to run the sample gazebo aruco simulation</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
 <a class="btn btn-neutral float-left" href="../intro_ros2_uav/" title="Intro to ROS2 and UAVs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../example/" title="Example Scenario">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
@@ -316,6 +307,7 @@ sudo apt-get install ignition-fortress
 <a class="fa fa-github" href="https://github.com/ucl-delta/project_gazebo_aruco" style="color: #fcfcfc"> GitHub</a>
 </span>
 <span><a href="../intro_ros2_uav/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../example/" style="color: #fcfcfc">Next »</a></span>
 </span>
 </div>
 <script src="../../js/jquery-3.6.0.min.js"></script>

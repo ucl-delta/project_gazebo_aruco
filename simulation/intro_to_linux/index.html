@@ -42,30 +42,26 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../drone/build_qav250_exercise/">QAV250 Build Guide</a>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../drone/build_qav250_guide/">QAV250 Build Guide (full)</a>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Simulation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current" href="#">A Brief Introduction to Linux</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#what-is-linux">4.1 What is Linux</a>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-linux">3.1 What is Linux</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#the-terminal">4.2 The Terminal</a>
+<li class="toctree-l2"><a class="reference internal" href="#the-terminal">3.2 The Terminal</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#navigating-the-file-system">4.3 Navigating the file system</a>
+<li class="toctree-l2"><a class="reference internal" href="#navigating-the-file-system">3.3 Navigating the file system</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#working-with-files">4.4 Working with files</a>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-files">3.4 Working with files</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#connecting-the-laptop-to-the-internet-eduroam">4.5 Connecting the laptop to the Internet (Eduroam)</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#installing-dependencies-and-useful-programs">4.6 Installing Dependencies and Useful Programs</a>
+<li class="toctree-l2"><a class="reference internal" href="#installing-dependencies-and-useful-programs">3.5 Installing Dependencies and Useful Programs</a>
 <ul>
-<li class="toctree-l3"><a class="reference internal" href="#installing-git-and-vscode">4.6.1 Installing Git and VSCode</a>
+<li class="toctree-l3"><a class="reference internal" href="#installing-git-and-vscode">3.5.1 Installing Git and VSCode</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#sudo">4.6.2 sudo</a>
+<li class="toctree-l3"><a class="reference internal" href="#sudo">3.5.2 sudo</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#installing-docker">4.6.3 Installing Docker</a>
+<li class="toctree-l3"><a class="reference internal" href="#installing-docker">3.5.3 Installing Docker</a>
 </li>
 </ul>
 </li>
@@ -75,19 +71,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Project Installation</a>
 </li>
-<li class="toctree-l1"><a class="" href="../..">Example Scenario</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Autonomy</span></p>
-<ul>
-<li class="toctree-l1"><a class="" href="../..">Programming the Drone</a>
-</li>
-<li class="toctree-l1"><a class="" href="../..">Detecting Aruco Tags</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Real Flight</span></p>
-<ul>
-<li class="toctree-l1"><a class="" href="../../something">None</a>
+<li class="toctree-l1"><a class="reference internal" href="../example/">Example Scenario</a>
 </li>
 </ul>
 </div>
@@ -112,13 +96,13 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="a-brief-introduction-to-linux"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> A Brief Introduction to Linux<a class="headerlink" href="#a-brief-introduction-to-linux" title="Permanent link">¶</a></h1>
+<h1 id="a-brief-introduction-to-linux"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> A Brief Introduction to Linux<a class="headerlink" href="#a-brief-introduction-to-linux" title="Permanent link">¶</a></h1>
 <p>Adapted from this <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics">digital ocean tutorial</a></p>
-<h2 id="what-is-linux"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> What is Linux<a class="headerlink" href="#what-is-linux" title="Permanent link">¶</a></h2>
+<h2 id="what-is-linux"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> What is Linux<a class="headerlink" href="#what-is-linux" title="Permanent link">¶</a></h2>
 <p>Linux is a family of free and open-source operating systems based on the Linux kernel (core operating system). Operating systems based on Linux are known as Linux distributions or distros. Examples include Debian, Ubuntu, Fedora, CentOS, Gentoo, Arch Linux, and many others.</p>
 <p>The Linux kernel has been under active development since 1991, and has proven to be extremely versatile and adaptable. You can find computers that run Linux in a wide variety of contexts all over the world, from web servers to cell phones. Today, 90% of all cloud infrastructure and 74% of the world’s smartphones are powered by Linux.</p>
 <p>However, newcomers to Linux may find it somewhat difficult to approach, as Linux filesystems have a different structure than those found on Windows or MacOS. Additionally, Linux-based operating systems depend heavily on working with the command line interface, while most personal computers rely on graphical interfaces.</p>
-<h2 id="the-terminal"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> The Terminal<a class="headerlink" href="#the-terminal" title="Permanent link">¶</a></h2>
+<h2 id="the-terminal"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> The Terminal<a class="headerlink" href="#the-terminal" title="Permanent link">¶</a></h2>
 <p>The terms “terminal,” “shell,” and “command line interface” are often used interchangeably, but there are subtle differences between them:</p>
 <ul>
 <li>A <strong>terminal</strong> is an input and output environment that presents a text-only window running a shell.</li>
@@ -136,7 +120,7 @@
 <p>Becoming a Linux user requires you to be comfortable with using a terminal. Any administrative task, including file manipulation, package installation, and user management, can be accomplished through the terminal. The terminal is interactive: you specify commands to run (after the $ sign) and the terminal outputs the results of those commands. To execute any command, you type it into the prompt and press <kbd class="keys"><kbd class="key-enter">Enter</kbd></kbd>.</p>
 <p>When using the Starling system, interacting with Docker and ROS2, you'll most often be doing so through a terminal shell. Although personal computers that run Linux often come with the kind of graphical desktop environment familiar to most computer users, it is often more efficient or practical to perform certain tasks through commands entered into the terminal. As of writing, a GUI (Graphical User Interface) has not been developed for Starling, and so almost all tasks have to be achieved through the terminal shell.</p>
 <p>A basic command to try out is <code>echo</code>, which will print things to the terminal. For example <code>echo hello-world</code> will print <code>hello-world</code> into the terminal. You can also use it to observe the value of <strong>Environment Variables</strong> which record and keep useful variables to the operation of the Operating System. For example, when you run a command in <code>bash</code>, <code>bash</code> will look for the command executable in the locations provided by the environment variable <code>PATH</code>. You can print the contents of this env-var using <code>echo $PATH</code>. The <code>$</code> before the name of the variable tells <code>bash</code> that the following word represents an environment variable, and that it should be looked up.</p>
-<h2 id="navigating-the-file-system"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> Navigating the file system<a class="headerlink" href="#navigating-the-file-system" title="Permanent link">¶</a></h2>
+<h2 id="navigating-the-file-system"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> Navigating the file system<a class="headerlink" href="#navigating-the-file-system" title="Permanent link">¶</a></h2>
 <p>Like Windows and Mac, the Linux filesystems are based on a directory tree. This means that you can create directories (which are functionally identical to folders found in other operating systems) inside other directories, and files can exist in any directory.</p>
 <p>The forward slash (<code>/</code>) is used to indicate the root directory in the filesystem hierarchy.</p>
 <p>When a user logs in to the shell, they are brought to their own user directory, stored within <code>/home/&lt;username&gt;</code>. This is referred to as the user’s home directory. Often you may see the <em>tilde</em> (<code>~</code>) character when specifying a file location (e.g. <code>~/Documents/hello.txt</code> = <code>/home/&lt;username&gt;/Documents/hello.txt</code>). This is shorthand for the user's home directory and gets substituted in when used.</p>
@@ -175,7 +159,7 @@ cd ../testdir1 # Brings you back out one level and back into testdir1
 cd /home/&lt;username&gt;/testdir2 # Absolute reference to testdir2
 cd ~/testdir2 # Absolute reference using tilde to testdir2
 </code></pre>
-<h2 id="working-with-files"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4</span> Working with files<a class="headerlink" href="#working-with-files" title="Permanent link">¶</a></h2>
+<h2 id="working-with-files"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4</span> Working with files<a class="headerlink" href="#working-with-files" title="Permanent link">¶</a></h2>
 <p>You cannot use cd to interact with files; cd stands for “change directory”, and only allows you to navigate directories. You can, however, create, edit, and view the contents of files.</p>
 <p>One way to create a file is with the touch command. This creates an empty file in your current working directory. To create a new file called file.txt:</p>
 <pre><code class="language-bash">touch file.txt
@@ -211,9 +195,7 @@ rm -r directory # If the directory you are deleting is not empty
 For instance, <code>man rm</code> displays the purpose of <code>rm</code>, how to use it, what options are available, examples of use, and more useful information.</p>
 <p><strong>NOTE</strong>: If a command fails or is hanging or you just want to stop it, most of the time you can stop the running process by pressing <kbd class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></kbd>. This will send a Keyboard Interrupt message to the program and hopefully stop it.</p>
 </blockquote>
-<h2 id="connecting-the-laptop-to-the-internet-eduroam"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.5</span> Connecting the laptop to the Internet (Eduroam)<a class="headerlink" href="#connecting-the-laptop-to-the-internet-eduroam" title="Permanent link">¶</a></h2>
-<p>For University of Bristol students connecting to Eduroam see theese <a href="https://www.wireless.bris.ac.uk/eduroam/instructions/go-ubuntu/">instructions</a></p>
-<h2 id="installing-dependencies-and-useful-programs"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.6</span> Installing Dependencies and Useful Programs<a class="headerlink" href="#installing-dependencies-and-useful-programs" title="Permanent link">¶</a></h2>
+<h2 id="installing-dependencies-and-useful-programs"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5</span> Installing Dependencies and Useful Programs<a class="headerlink" href="#installing-dependencies-and-useful-programs" title="Permanent link">¶</a></h2>
 <p>Like windows and mac, individual programs can be manually downloaded (usually as a <code>tar.gz</code> file instead of <code>exe</code>) and manually installed into your operating system (using <code>dpkg</code>). However, the linux project offers a much more straight forward method through the <code>apt</code> (Advanced Packaging Tool) utility. <code>apt</code> is a free-software user interface that works with core libraries to handle the installation and removal of software on Debian operating systems like Ubuntu. (For other distributions you may come across equivalents like <code>yum</code>). This is the primary method for installing software onto your system.</p>
 <p>To use <code>apt</code>, and more specifically <code>apt-get</code> which 'gets' programs for you, you must first run the <code>update</code> command to get the current list of all available software. Note that because <code>sudo</code> is used, you will most likely need to input your password. <code>sudo</code> will be explained below.</p>
 <pre><code class="language-bash">sudo apt-get update
@@ -221,16 +203,16 @@ For instance, <code>man rm</code> displays the purpose of <code>rm</code>, how t
 <blockquote>
 <p><strong>Note</strong> that it will hang (stop responding) or fail if you are not connected to the internet.</p>
 </blockquote>
-<h3 id="installing-git-and-vscode"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.6.1</span> Installing Git and VSCode<a class="headerlink" href="#installing-git-and-vscode" title="Permanent link">¶</a></h3>
+<h3 id="installing-git-and-vscode"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.1</span> Installing Git and VSCode<a class="headerlink" href="#installing-git-and-vscode" title="Permanent link">¶</a></h3>
 <p>You can then install your programs using <code>apt-get install</code>. For Starling, you will need to use the <code>git</code> version control software to both download Starling and eventually build your own controllers. To install <code>git</code>, run the following:</p>
 <pre><code class="language-bash">sudo apt-get install git
 </code></pre>
 <p>We also recommend the use of <a href="https://code.visualstudio.com/">Visual Studio Code</a> as your development environment or text editor, but you are free to use whatever you want (atom, notepad++ etc etc). We heavily make use of it during development and recommend a number of extensions. VScode can be installed using the <code>snap</code> utility. <code>snap</code> is a slightly more modern successor to <code>apt</code> for more general programs. <code>snap</code> comes ready installed on your linux distrubtion.</p>
 <pre><code class="language-bash">sudo snap install code --classic
 </code></pre>
-<h3 id="sudo"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.6.2</span> <code>sudo</code><a class="headerlink" href="#sudo" title="Permanent link">¶</a></h3>
+<h3 id="sudo"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.2</span> <code>sudo</code><a class="headerlink" href="#sudo" title="Permanent link">¶</a></h3>
 <p>Now in these commands, we have prefixed all of them with <code>sudo</code>. <code>sudo</code> these days usually stands for <code>superuser do</code> and allows a command to be run with the privileges of the superuser (aka the <em>root</em> user), if the user has been given permissions to do so. Any command which installs or modifies directories outside of the users home directory will often need superuser privileges to avoid non-superusers from changing things they shouldn't. As the above commands all seek to install programs to the system, they need superuser permissions to do so. Running without <code>sudo</code> will give you a permission error. Running a command with <code>sudo</code> will ask you for your <em>own accounts</em> password.</p>
-<h3 id="installing-docker"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.6.3</span> Installing Docker<a class="headerlink" href="#installing-docker" title="Permanent link">¶</a></h3>
+<h3 id="installing-docker"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.3</span> Installing Docker<a class="headerlink" href="#installing-docker" title="Permanent link">¶</a></h3>
 <p>For Linux systems, see the following <a href="https://docs.docker.com/engine/install/ubuntu/">install page</a>. There are multiple ways of installation docker, but we recommend installing using the repository method:</p>
 <ol>
 <li>
@@ -289,7 +271,7 @@ sudo usermod -aG docker $USER
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../drone/build_qav250_guide/" title="QAV250 Build Guide (full)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../../drone/build_qav250_exercise/" title="QAV250 Build Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../intro_ros2_uav/" title="Intro to ROS2 and UAVs">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
@@ -309,7 +291,7 @@ sudo usermod -aG docker $USER
 <span>
 <a class="fa fa-github" href="https://github.com/ucl-delta/project_gazebo_aruco" style="color: #fcfcfc"> GitHub</a>
 </span>
-<span><a href="../../drone/build_qav250_guide/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../../drone/build_qav250_exercise/" style="color: #fcfcfc">« Previous</a></span>
 <span><a href="../intro_ros2_uav/" style="color: #fcfcfc">Next »</a></span>
 </span>
 </div>
