@@ -149,10 +149,10 @@
 </blockquote>
 <h3 id="power-distribution-board-and-escs"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.2</span> Power Distribution Board and ESCs<a class="headerlink" href="#power-distribution-board-and-escs" title="Permanent link">¶</a></h3>
 <p>One of the first components you will come across is the spidery looking bunch of cables attached to a central board</p>
-<p><a href="">Insert Picture of the PDB</a></p>
+<p><a href="../images/pdb_connections.png">Insert Picture of the PDB</a></p>
 <p>The main board is what is known as the power distribution board and is responsible for powering all the components on the drone, as well as handling the high current draws required by the motors! </p>
 <p>Each of the four legs contains what is known as the electronic speed controller (ESC). The ESC manages the speed (current draw) of the motor using an input signal from the flight controller. The input signal is often a specific PWM aka pulse width modulation signal. The cables here are rather thick to enable the high current that is required to power the motors. This is a key component in flight. The signal cables plug into the back of the FC in slots 1,2,3 and 4. </p>
-<p><img alt="Insert picture of the ESC" src=""/></p>
+<p><img alt="Insert picture of the ESC" src="../images/esc_connection.png"/></p>
 <blockquote>
 <p>Note: Watch the orientation of the ESCs when you attach them, they are soldered in such a way that two of them are intentionally upside down when laid flat. </p>
 <p>Note: You will need to double check the order of the ESC cables are plugged into the FC when you get to running the software configuration. Making a mistake here may cause the drone to be uncontrollable! Rea</p>
@@ -166,19 +166,19 @@
 <p>You will see that there are no instructions on installing the motors! </p>
 <p>Hopefully you have a good idea of where the motors are meant to go! Try and install them so that the wires go towards the chasis and dont poke out the side. </p>
 <p>We have printed some propellor guards for the drone, these go under the arm using the same mounting points as the motors. You will need the m3x8mm bolts. Ensure that they are securely fastened</p>
-<p><img alt="Inser picture of prop guard attachment point" src=""/></p>
+<p><img alt="Insert picture of prop guard attachment point" src="../images/prop_guard.png"/></p>
 <p>We have also printed off some longer landing legs for the drone too to accomodate the companion computer underneath. Attach those with appropriate bolts and nylock nuts too.</p>
-<p><img alt="Insert picture of leg attachment point" src=""/></p>
+<p><img alt="Insert picture of leg attachment point" src="../images/leg_parts.png"/></p>
 <blockquote>
 <p><strong>DO NOT INSTALL THE PROPELLORS YET</strong></p>
 </blockquote>
 <p>The motors should plug into the ESCs in a sraightforward manner with left cable going to left banana plug, center to center and right to right. </p>
-<p><img alt="Insert picture of motor" src=""/></p>
+<p><img alt="Insert picture of motor" src="../images/esc_connection.png"/></p>
 <p>Compare your setup with the example drone before you use a ziptie to fix down the ESC. </p>
 <h3 id="pixhawk-6c-flight-controller"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.4</span> Pixhawk 6C Flight Controller<a class="headerlink" href="#pixhawk-6c-flight-controller" title="Permanent link">¶</a></h3>
 <p>The QAV250 uses the Pixhawk 6C Flight controller. This is essentially a small computer (embedded microcontroller) which is designed to support the low level high frequency control of a UAV (e.g. stable flight), communications and basic sensor processing. </p>
 <p>The 6C has a number of ports on all sides of the drone - read a bit about it on the docs to work out what each one is for! </p>
-<p><img alt="Picture of the Pixhawk 6C Flight Controller" src=""/></p>
+<p><img alt="Picture of the Pixhawk 6C Flight Controller" src="../images/pixhawk6c.png"/></p>
 <p>This will have a lot of cables coming out of it, but you probably want to work out how to power it! </p>
 <blockquote>
 <p>Note: Use the custom cable with the jumper cables coming out of them - this will be used for powering the companion computer later. </p>
@@ -187,6 +187,7 @@
 <p>The second communication method (after the passive video feed communication method) is using the SIK Radios on 433 MHz. </p>
 <p>There are a pair of them, one to go onboard the drone, and the other is designed to plug into your computer by USB! </p>
 <p>This should be plugged into TELEM1 of the FC and it should start transmitting data to the reciever when turned on. </p>
+<p><img alt="sik radio" src="../images/sik_radio.png"/></p>
 <h3 id="connecting-the-remote-control-aka-receiver-rx-and-transmitter-tx"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.6</span> Connecting the remote control (aka receiver Rx and transmitter Tx)<a class="headerlink" href="#connecting-the-remote-control-aka-receiver-rx-and-transmitter-tx" title="Permanent link">¶</a></h3>
 <p>We have bought some flysky i6x Transmitters (Txs) which can fly the drones. These come in two parts, a Tx ad a receiver (RX). In the most basic drone setups, you can directly control all of the motors from a Rx! However we have a slightly more complex setup to enable autonomy. </p>
 <p>The receiver is the following: </p>
@@ -195,20 +196,21 @@
 <p>Hint: You will need to plug in two of the cables between the Rx and the FC, one of them is a custom cable. </p>
 </blockquote>
 <p>We have printed out a custom holder for it - slot the Rx into the holder and use some M2 screws to tighten it down. Antennae thread through the cyliners. Then use some spare double sided sticky tape to attach it to the top plate towards the front (doesn't get in the way of battery). </p>
+<p><img alt="receiver" src="../images/receiver.png"/></p>
 <h3 id="attaching-the-raspberry-pi-companion-computer"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.7</span> Attaching the Raspberry Pi Companion Computer<a class="headerlink" href="#attaching-the-raspberry-pi-companion-computer" title="Permanent link">¶</a></h3>
 <p>Now you may have noticed a large component that is not on the original instructions. We want to add autonomy, and that will often involve adding a companion computer to the drone. The purpose of the companion computer is to perform higher level functionality involved with completing the task. This may be mission planning, path planning, computer vision, higher level comms etc. </p>
 <p>Here we have chosen to use a Raspberry Pi 4B single board computer as its a nice little compact package which has enough compute and compatibility to help perform the autonomy we are aiming for. (In this case run ROS2!)</p>
 <p>Place the raspberry pi into the 3D printed case and carefully screw it in. Then screw in the raspberry pi camera into the top surface of the case using some m2 nuts and bolts. Use the dual-loc velcro like tape to attach it to the bottom of the drone! Make sure you don't cover up any of the screw access holes! </p>
-<p><img alt="Picture of attachment of pi case" src=""/></p>
+<p><img alt="Picture of attachment of pi case" src="../images/pi_case.png"/></p>
 <p>The pi will be both powered and connected to the FC via its GPIO (general purpose IO pins). For powering, the PI will be directly powered using the 5v pin - you can plug the connector into the spot with a 5v next to a ground! For talking to the FC, you can use the custom cable to connect the <code>TELEM2</code> port to the <code>UART</code> pins of the Pi. See the following diagram for details:</p>
-<p><img alt="Insert link to PX4/Pi connection and picture of GPIO" src=""/></p>
+<p><img alt="Insert link to PX4/Pi connection and picture of GPIO" src="../images/pi_connection.png"/></p>
 <blockquote>
 <p><strong>NOTE: Make sure you plug the power connector the right way around. Plugging it in the wrong way or in the wrong pins can blow the Pi.</strong></p>
 </blockquote>
 <h3 id="attaching-the-rangefinder"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.8</span> Attaching the rangefinder<a class="headerlink" href="#attaching-the-rangefinder" title="Permanent link">¶</a></h3>
 <p>We have also included the VL53L1X rangefinder sensor - this uses a light or infrared beam to work out the distance to an object. In our case we will be mounting it to the bottom of our drone to tell us its height. </p>
 <p>Use some of the leftover tape to stick it to the underside towards the front, under the video transmitter unit. This will need to plug into the FC, but have a think of where it might go as a sensor! </p>
-<p><img alt="Insert picture of rangefinder in position on drone" src=""/></p>
+<p><img alt="Insert picture of rangefinder in position on drone" src="../images/rangefinder.png"/></p>
 <h2 id="drone-setup"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Drone Setup<a class="headerlink" href="#drone-setup" title="Permanent link">¶</a></h2>
 <p>In this section we go over how to setup the drone to prepare it for first flight</p>
 <h3 id="ground-station-qgroundcontrol"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.1</span> Ground Station - QGroundControl<a class="headerlink" href="#ground-station-qgroundcontrol" title="Permanent link">¶</a></h3>

@@ -137,6 +137,9 @@
 <li>Max OSX: Docker with VNC</li>
 </ul>
 <p>Note that you will need at least 20Gb free on your system to avoid lockup. Graphics card and 16Gb RAM is recommended. </p>
+<blockquote>
+<p><strong>Windows</strong> You will need to install WSL2 for Docker and these docker containers to work. <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Instructions Here</a></p>
+</blockquote>
 <p>See Documentation for detailed instructions</p>
 <h3 id="local"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.1</span> Local<a class="headerlink" href="#local" title="Permanent link">¶</a></h3>
 <p>Install Ubuntu 22.04, ROS2 Humble, Ignition Gazebo Fortress as per their instructions. See <a href="#Environment-Installation">these instructions for installation</a></p>
@@ -204,7 +207,10 @@ git clone https://github.com/ucl-delta/project_gazebo_aruco.git
 <p>This container is based on Ubuntu 22.04, ROS2 Humble and Ignition Gazebo Fortress</p>
 <pre><code>./docker/docker_vnc_start.bash
 </code></pre>
-<p>After building for a while, this will say that it has started the VNC server</p>
+<p>After building for a while, this will say that it has started the VNC server.</p>
+<blockquote>
+<p>Note in some instances, the first time you build it it may time out. Run it again and it should finish its build. </p>
+</blockquote>
 <p>Go into a browser and navigate to <code>https://127.0.0.1:6080</code> and press <code>connect</code>. This will drop you into an ubunut22.04 desktop environment with all the things you need! </p>
 <p>The container will have live mounted this project into <code>/ros2/project_gazebo_aruco</code> so that any changes made to this repository outside of the container will be reflected inside. </p>
 <p>Open up a terminal (<code>terminator</code>) and navigate to <code>/ros2/project_gazebo_aruco</code> to run the example. </p>
